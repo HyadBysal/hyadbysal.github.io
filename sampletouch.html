@@ -16,10 +16,12 @@ $(document).bind('touchstart', function(e) {
 
 $(document).bind('touchmove', function(e) {
     var te = e.originalEvent.changedTouches[0].clientY;
-    if (ts > te) {
-        alert('down');
-    } else {
-        alert('up');
+    if (ts > te){
+
+        alert('down' + " " + ts);
+    }
+    else{
+        alert('up' + " " + te);
     }
 });
 	});	
