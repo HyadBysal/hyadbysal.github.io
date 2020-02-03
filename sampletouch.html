@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var ts;
+$(document).bind('touchstart', function(e) {
+    ts = e.originalEvent.touches[0].clientY;
+});
+
+$(document).bind('touchmove', function(e) {
+    var te = e.originalEvent.changedTouches[0].clientY;
+    if (ts > te) {
+        alert('down');
+    } else {
+        alert('up');
+    }
+});
+	});	
+</script>
+</html>
